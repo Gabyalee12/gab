@@ -13,6 +13,7 @@ import router from '@adonisjs/core/services/router'
 
 
 //crear una ruta
+router.on('/').render('pages/ww').as('home')
 router.on('/blog').render('pages/blog').as('blog')
 
 router

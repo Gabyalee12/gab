@@ -1,3 +1,15 @@
 @layout()
- <h1> hola</h1>
+<div class="grid grid-cols-1 md:grid-cols-3 lig:grid-cols-4 gap-6">
+ @!component('components/card', {
+  title:'hola',
+  body: 'asdfghj'
+ })
+
+
+      @!component('components/card', {
+        title:'hello'
+        boby: ''
+      })
+
+
 @end
