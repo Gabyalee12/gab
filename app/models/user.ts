@@ -2,6 +2,16 @@ import { UserSchema } from '#database/schema'
 import hash from '@adonisjs/core/services/hash'
 import { compose } from '@adonisjs/core/helpers'
 import { withAuthFinder } from '@adonisjs/auth/mixins/lucid'
+import Note from './note.ts'
+import {hasMany } from '@adonisjs/lucid types/relations'
+
+export default class user extends compose (UserSchema,withAuthFinder(hash)) {
+@hasMany(() => note )
+declare note : HasMany<typeof note > 
+}
+
+
+
 
 /**
  * User model represents a user in the application.
